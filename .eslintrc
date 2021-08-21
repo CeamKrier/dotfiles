@@ -1,0 +1,30 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "env": {
+      "browser" : true,
+      "node" : true,
+      "es6" : true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 10,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-trailing-spaces":"error",
+      "comma-dangle":"error",
+      "semi": "error",
+      "object-curly-spacing": ["error", "always"],
+      "react/prop-types": ["error", { "ignore": ["children"] }],
+      "space-before-blocks": ["error", "always"],
+      "no-unused-vars": "warn"
+    }
+  }
