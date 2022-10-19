@@ -1,0 +1,32 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                // "modules": false // module - import/export
+                "targets": {
+                    "esmodules": true
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./"],
+                "alias": {
+                    "@Configs": "./src/configs",
+                    "@Database": "./src/database",
+                    "@Middlewares": "./src/middlewares",
+                    "@Handlers": "./src/handlers",
+                    "@Services": "./src/services",
+                    "@Helpers": "./src/helpers",
+                    "@Logs": "./src/logs",
+                    "@Utils": "./src/utils"
+                }
+            }
+        ],
+        ["babel-plugin-add-import-extension", { "extension": "js" }] // default is js
+    ]
+}
